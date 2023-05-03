@@ -1,12 +1,12 @@
 pipeline{
     agent any
     environment {
-        PATH = "$PATH:/opt/apache-maven-3.8.2/bin"
+        PATH = "$PATH:/opt/apache-maven-3.9/bin"
     }
     stages{
        stage('GetCode'){
             steps{
-                git 'https://github.com/ravdy/javaloginapp.git'
+                git 'https://github.com/tirusoma/javalogin.git'
             }
          }        
        stage('Build'){
