@@ -1,4 +1,4 @@
-currentBuild.displayName = "Maven-Project-#"+currentBuild.number
+currentBuild.displayName = "SonarQube-Project-#"+currentBuild.number
 
 pipeline{
     agent any
