@@ -10,11 +10,12 @@ pipeline{
             }
          }        
        stage('build'){
+        steps{ 
           withMaven(maven: 'mvn'){
             sh "mvn clean package"
            }
         }
-		
+      }	
         stage('SonarQube analysis') {
 //    def scannerHome = tool 'SonarScanner 4.0';
         steps{
@@ -24,6 +25,7 @@ pipeline{
         sh "mvn sonar:sonar"
             }
         }
-      }       
+      }
+       
     }
-} 
+}  
