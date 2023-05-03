@@ -9,11 +9,11 @@ pipeline{
                 git 'https://github.com/tirusoma/javalogin.git'
             }
          }        
-       stage('Build'){
-            steps{
-                sh 'mvn clean package'
-            }
-         }
+       stage('build'){
+          withMaven(maven: 'mvn') {
+            sh "mvn clean package"
+           }
+        }
         stage('SonarQube analysis') {
 //    def scannerHome = tool 'SonarScanner 4.0';
         steps{
@@ -26,4 +26,4 @@ pipeline{
         }
        
     }
-}
+} 
