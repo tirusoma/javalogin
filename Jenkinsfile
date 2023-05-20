@@ -10,7 +10,7 @@ pipeline{
     stages{     
        stage('GetCode'){
             steps{
-                git 'git@github.com:tirusoma/javalogin.git'
+                git 'https://github.com/tirusoma/javalogin.git'
             }
         }     
       
